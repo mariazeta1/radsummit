@@ -28,9 +28,9 @@ disp
 disp "Starting import of: `csvfile'"
 disp
 
-* import data from primary .csv file
-insheet using "`csvfile'", names clear
-
+* import data from primary .csv file. Remember that you have to check that this is the right version of the cvs file. This is a change. 
+insheet using "`csvfile'", names clear 
+summarize age, detail 
 * drop extra table-list columns
 cap drop reserved_name_for_field_*
 cap drop generated_table_list_lab*
